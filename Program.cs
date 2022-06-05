@@ -8,13 +8,7 @@ builder.Services.AddCors(c =>
     c.AddPolicy(name: MyAllowSpecificOrigins,
                   policy =>
                   {
-                      policy.WithOrigins("http://127.0.0.1:5500",
-                                         "http://127.0.0.1",
-                                         "http://localhost",
-                                         "http://127.0.0.1:80",
-                                         "http://127.0.0.1:443",
-                                         "http://food",
-                                         "https://food")
+                      policy.AllowAnyOrigin()
                             .AllowAnyHeader();
                   });
 });
